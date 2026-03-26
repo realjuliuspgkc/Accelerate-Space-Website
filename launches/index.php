@@ -14,7 +14,7 @@
         <?php
             require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
 
-            $query = "SELECT launchName, redirectPath, launchDate FROM launches WHERE completed = 0 ORDER BY launchDate ASC LIMIT 1";
+            $query = "SELECT launchName, redirectPath, launchDate FROM launches WHERE completed = 0 ORDER BY launchOrder ASC LIMIT 1";
 
             $result = mysqli_query($conn, $query);
 
@@ -76,7 +76,7 @@
                 <?php
                     require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
 
-                    $query = "SELECT * FROM launches WHERE completed = 0 ORDER BY launchDate ASC";
+                    $query = "SELECT * FROM launches WHERE completed = 0 ORDER BY launchOrder ASC";
 
                     $result = mysqli_query($conn, $query);
 
@@ -218,6 +218,10 @@
                     <tr>
                         <td>
                             <div class="d-flex align-items-center gap-2">
+                                <img src="<?= htmlspecialchars($row['missionPatch']); ?>" 
+                                    width="100" height="100" 
+                                    class="flex-shrink-0">
+
                                 <a href="/launches/page?launch=<?= urlencode($row['redirectPath']); ?>" 
                                 class="text-white">
                                     <?= htmlspecialchars($row['launchName']); ?>
@@ -280,6 +284,9 @@
                         </td>
 
                         <td><?= $formattedDate ?></td>
+                        <td><?= htmlspecialchars($row['vehicleType']); ?></td>
+                        <td><?= htmlspecialchars($row['customer']); ?></td>
+                        <td><?= htmlspecialchars($row['launchSite']); ?></td>
                     </tr>
                 <?php } ?>
             </tbody>

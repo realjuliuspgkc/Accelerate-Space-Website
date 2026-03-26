@@ -14,6 +14,7 @@
     $result = $stmt->get_result();
 
     while ($row = $result->fetch_assoc()) {
+        $launchOrder1 = $row["launchOrder"];
         $redirectPath1 = $row["redirectPath"];
         $launchName1  = $row["launchName"];
         $vehicleType1  = $row["vehicleType"];
@@ -40,6 +41,7 @@
         $customer     = !empty($_POST['customer']) ? $_POST['customer'] : $customer1;
         $launchSite   = !empty($_POST['launchsite']) ? $_POST['launchsite'] : $launchSite1;
         $payload      = !empty($_POST['payload']) ? $_POST['payload'] : $payload1;
+        $launchOrder  = !empty($_POST['launchorder']) ? $_POST['launchorder'] : $launchOrder1;
 
         // ===== FILE UPLOAD =====
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/assets/uploads/";
@@ -57,7 +59,7 @@
                 $uploadOk = 0;
             }
 
-            if ($_FILES["missionpatch"]["size"] > 2000000) {
+            if ($_FILES["missionpatch"]["size"] > 10000000) {
                 $uploadOk = 0;
             }
 
@@ -78,6 +80,7 @@
         // ===== DATABASE INSERT =====
         $stmt = $conn->prepare("
             UPDATE launches SET
+              	launchOrder = ?,
                 launchName = ?,
                 vehicleType = ?,
                 description = ?,
@@ -92,7 +95,8 @@
         ");
 
         $stmt->bind_param(
-            "sssssssssss",
+            "ssssssssssss",
+            $launchOrder,
             $launchName,
             $vehicleType,
             $description,
@@ -141,6 +145,11 @@
         <div style="padding: 15px; gap: 15px;" >
             <div class="card card-sm bg-black">
             <div class="card-body">
+            <p style="color: white;">Launch Order: </p><input type="text" name="launchorder"  value="<?= htmlspecialchars($launchOrder1)?>" class="form-control">
+            </div>
+        </div>
+            <div class="card card-sm bg-black">
+            <div class="card-body">
             <p style="color: white;">Launch name: </p><input type="text" name="launchname"  value="<?= htmlspecialchars($launchName1)?>" class="form-control">
             </div>
         </div>
@@ -151,7 +160,7 @@
         </div>
         <div class="card card-sm bg-black">
             <div class="card-body"> 
-            <p style="color: white;">Description: <input type="text" name="description" value="<?= htmlspecialchars($description1)?>" class="form-control">
+            <p style="color: white;">Description: <textarea name="description" rows="5" cols="40" class="form-control"><?php echo htmlspecialchars($description1); ?></textarea>
         </div>
         </div>
         <div class="card card-sm bg-black">

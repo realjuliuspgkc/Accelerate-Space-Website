@@ -37,12 +37,12 @@
                 $uploadOk = 0;
             }
 
-            if ($_FILES["missionpatch"]["size"] > 2000000) {
-                $uploadOk = 0;
+            if ($_FILES["missionpatch"]["size"] > 10000000) {
+                die("File too large. Max 5MB allowed.");
             }
 
             if (!in_array($imageFileType, ['jpg','jpeg','png'])) {
-                $uploadOk = 0;
+                die("File type incorrect. jpg, jpeg, png only.");
             }
 
             if ($uploadOk && move_uploaded_file($_FILES["missionpatch"]["tmp_name"], $target_file)) {
@@ -110,7 +110,7 @@
         </div>
         <div class="card card-sm bg-black">
             <div class="card-body"> 
-            <p style="color: white;">Description: <input type="text" name="description" class="form-control">
+            <p style="color: white;">Description: <textarea name="description" rows="5" cols="40" class="form-control"></textarea>
         </div>
         </div>
         <div class="card card-sm bg-black">

@@ -96,7 +96,7 @@
             </div>
             <div class="card card-sm bg-black">
                 <div class="card-body">
-                <p style="color: white;">Contents:</p> <input type="text" name="contents" class="form-control">
+                <p style="color: white;">Contents:</p> <textarea rows="5" cols="40" name="contents" class="form-control"></textarea>
                 </div>
             </div>
             <div class="card card-sm bg-black">

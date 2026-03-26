@@ -99,8 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         @file_put_contents($tmpfile, json_encode($submissions));
         $submitted = true;
 
-        $message = "New launch booking submission:\n\nName: $name\nCompany: $company\nCountry of Origin: $origincountry\nEmail: $email\nTarget Date: $targetdate\nPayload Readiness Date: $payloadreadydate\nPayload Mass: $payloadmass\nInclination: $inclination\nAltitude: $altitude\nLaunch Details:\n$launchdetail\nCraft File: $craftfile\n \n \n Please reply to this email to get in touch with the team and discuss next steps. \n\nBest regards,\nThe Accelerate Space Team";
-
+        $message = "New launch booking submission:\n \nYou must reply to this email for your booking to be confirmed.\n\nName: $name\nCompany: $company\nCountry of Origin: $origincountry\nEmail: $email\nTarget Date: $targetdate\nPayload Readiness Date: $payloadreadydate\nPayload Mass: $payloadmass\nInclination: $inclination\nAltitude: $altitude\nLaunch Details:\n$launchdetail\nCraft File: $craftfile \n\nBest regards,\nThe Accelerate Space Team";
         require 'src/Exception.php';
         require 'src/PHPMailer.php.filepart';
         require 'src/SMTP.php';

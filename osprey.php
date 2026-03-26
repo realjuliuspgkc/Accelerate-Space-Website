@@ -27,13 +27,13 @@
 <div class="background">
     <img src="/assets/images/osprey_main.png" alt="Mission Image" class="bgimg">
     <div class="content" style="text-align: center; left: 7%;">
-        <p class="mission-title" style="color: rgb(255, 255, 255); font-weight: bold; font-size: 4rem;">OSPREY</p>
-        <p class="mission-text" style="color: rgb(255, 255, 255);  font-size: 0.8rem;">OUR SMALL SATELLITE LAUNCHER.</p>
+        <p class="mission-title" style="color: rgb(29, 29, 29); font-weight: bold; font-size: 4rem;">OSPREY</p>
+        <p class="mission-text" style="color: rgb(29, 29, 29);  font-size: 0.8rem;">OUR SMALL SATELLITE LAUNCHER.</p>
     </div>
 </div>
 
 <div style=" position:relative;  background:black; padding: 1.5rem;">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row row-deck justify-content-center">
             <div class="col-md-4">
                 <div class="card" style="background:rgba(0,0,0,0.0); box-shadow:none; color:white; border:none;">

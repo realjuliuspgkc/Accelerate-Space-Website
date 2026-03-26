@@ -1,12 +1,15 @@
 <?php 
-        $email = "jeremy@rinza.xyz";
+        $email = "ab";
         $message = "Test";
         $name = "Test";
         
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
 
-        require 'vendor/autoload.php';
+        require 'src/Exception.php';
+        require 'src/PHPMailer.php.filepart';
+        require 'src/SMTP.php';
+
 
         $mail = new PHPMailer(true);
         $mail->SMTPDebug = 2;

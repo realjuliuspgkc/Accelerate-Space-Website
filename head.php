@@ -22,7 +22,7 @@ register_shutdown_function(function() {
                 <li class="list-inline-item"><a href="/assets/Accelerate Space Privacy Policy.pdf" class="link-secondary">Privacy Policy</a></li>
                 <li class="list-inline-item"><a href="updates" class="link-secondary">Updates</a></li>
                 <li class="list-inline-item"><a href="https://discord.com/invite/9Sjf5sjJ64" class="link-secondary">Discord</a></li>
-                <lt class="list-inline-item"><a href="mailto:enquiries@acceleratespace.org" class="link-secondary">Contact</a></li>
+                <lt class="list-inline-item"><a href="contact-us" class="link-secondary">Contact</a></li>
                 </ul>
             </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0">
@@ -55,86 +55,66 @@ register_shutdown_function(function() {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Accelerate Space KSP">
+    <meta name="description" content="Accelerate Space KSP">
+    <meta name="keywords" content="Accelerate, Space, KSP, Accelerate Space, Accelerate Space KSP">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Jeremy Chin">
+
+    <link rel="canonical" href="https://acceleratespace.org">
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler.min.css" />
 
     <link rel="icon" type="image/x-icon" href="/assets/images/accelerate500x500.png?v=<?php echo filemtime(dirname(__FILE__).'/accelerate500x500.png'); ?>">
     <link rel="stylesheet" href="/style.css?v=<?php echo filemtime(dirname(__FILE__).'/style.css'); ?>">
-    <link rel="stylesheet" href="/custom-tabler-overrides.css?v=<?php echo filemtime(dirname(__FILE__).'/custom-tabler-overrides.css'); ?>">
 
     <style>
-        .navbar { 
-            transition: background-color 250ms ease, box-shadow 250ms ease; 
-            background-color: black !important; 
-            width: 100%;
-        } 
-        .navbar.transparent { 
-            background-color: transparent !important; 
-            box-shadow: none !important; 
-            -webkit-backdrop-filter: blur(6px); 
-            backdrop-filter: blur(6px); 
-        } 
-        .navbar.solid { 
-            background-color: black !important; 
-            box-shadow: 0 1px 8px rgba(0,0,0,0.08) !important; 
-        }
+    .navbar { 
+        transition: background-color 250ms ease, box-shadow 250ms ease; 
+        background-color: black !important; 
+        width: 100%;
+    } 
+    .navbar.transparent { background-color: transparent !important; box-shadow: none !important; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
+    .navbar.solid { background-color: black !important; box-shadow: 0 1px 8px rgba(0,0,0,0.08) !important; }
     </style>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){ 
-            const nav = document.querySelector('.navbar'); 
-            
-            if(!nav) return; 
-            
-            function updateNav(){ 
-                if(window.scrollY > 0){ 
-                    nav.classList.add('transparent'); 
-                    nav.classList.remove('solid'); 
-                } else { 
-                    nav.classList.add('solid'); 
-                    nav.classList.remove('transparent'); 
-                    } 
-            } 
-            updateNav(); 
-            window.addEventListener('scroll', updateNav, {passive:true}); 
-        }); 
-    </script>
+    <script> document.addEventListener('DOMContentLoaded', function(){ const nav = document.querySelector('.navbar'); if(!nav) return; function updateNav(){ if(window.scrollY > 0){ nav.classList.add('transparent'); nav.classList.remove('solid'); } else { nav.classList.add('solid'); nav.classList.remove('transparent'); } } updateNav(); window.addEventListener('scroll', updateNav, {passive:true}); }); </script>
 </head>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const elements = document.querySelectorAll(".local-time");
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".local-time");
 
-        elements.forEach(el => {
-            const timestamp = parseInt(el.dataset.ts) * 1000;
-            const date = new Date(timestamp);
+    elements.forEach(el => {
+        const timestamp = parseInt(el.dataset.ts) * 1000;
+        const date = new Date(timestamp);
 
-            // Format date exactly like: March 7, 2026 20:28
-            const datePart = date.toLocaleDateString(undefined, {
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric'
-            });
-
-            const timePart = date.toLocaleTimeString(undefined, {
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: false
-            });
-
-            // Get user's timezone name
-            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            const shortTZ = date.toLocaleTimeString(undefined, {
-                timeZoneName: 'short'
-            }).split(' ').pop();
-
-            el.textContent = `${datePart} ${timePart} ${shortTZ}`;
+        // Format date exactly like: March 7, 2026 20:28
+        const datePart = date.toLocaleDateString(undefined, {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
         });
+
+        const timePart = date.toLocaleTimeString(undefined, {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+
+        // Get user's timezone name
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const shortTZ = date.toLocaleTimeString(undefined, {
+            timeZoneName: 'short'
+        }).split(' ').pop();
+
+        el.textContent = `${datePart} ${timePart} ${shortTZ}`;
     });
+});
 </script>
 <body>
     <header class="navbar navbar-expand-md d-print-none sticky-top">
-        <div class="container-fluid">
+        <div class="container-fluid px-4">
             <a href="/" class="navbar-brand">
                 <img src="/assets/images/accelerate-space.png" alt="Accelerate Space Logo" class="navbar-brand-image">
             </a>
@@ -174,7 +154,7 @@ register_shutdown_function(function() {
                             <?php
                                 require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
 
-                                $query = "SELECT launchName, redirectPath, missionPatch, launchDate FROM launches WHERE completed = 0 ORDER BY launchDate ASC LIMIT 2";
+                                $query = "SELECT launchName, redirectPath, missionPatch, launchDate FROM launches WHERE completed = 0 ORDER BY launchOrder ASC LIMIT 2";
 
                                 $result = mysqli_query($conn, $query);
 

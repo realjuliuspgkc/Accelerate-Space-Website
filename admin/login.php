@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/head.php');
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST["username"];
@@ -29,6 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->close();
 }
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/head.php');
 ?>
 
 <div style="display: flex; 

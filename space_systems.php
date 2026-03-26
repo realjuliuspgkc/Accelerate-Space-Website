@@ -24,8 +24,8 @@
 
 <script type="module" src="https://cdn.jsdelivr.net/gh/lekoala/formidable-elements@master/dist/count-up.min.js"></script>
 
-<div class="background" style="height: 95vh !important">
-    <img src="/assets/images/Kerbal_Space_Program_Screenshot_2026.02.18_-_18.57.13.65.png" alt="Mission Image" class="bgimg" style="height: 95vh !important">
+<div class="background" style="height: 95vh !important;">
+    <img src="/assets/images/Kerbal_Space_Program_Screenshot_2026.02.18_-_18.57.13.65.png" alt="Mission Image" class="bgimg" style="height: 95vh !important;">
     <div class="content" style="text-align: right; right: 5%;">
         <p class="mission-title" style="color: rgb(255, 255, 255);">PAYLOADS</p>
         <p class="mission-text" style="color: rgb(255, 255, 255);">Built for Orbit. <br>Ready for Launch.</p>
