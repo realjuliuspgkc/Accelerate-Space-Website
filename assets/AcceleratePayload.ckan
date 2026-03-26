@@ -1,0 +1,287 @@
+{
+    "spec_version": "v1.6",
+    "identifier": "installed-Kerbal-Space-Program",
+    "name": "installed-Kerbal Space Program",
+    "abstract": "A list of modules installed on the Kerbal Space Program KSP instance",
+    "author": "quint",
+    "version": "2026.03.02.10.15.28",
+    "ksp_version_min": "1.8",
+    "ksp_version_max": "1.12",
+    "license": "unknown",
+    "depends": [
+        {
+            "name": "SpaceXLegs",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "kOS",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ReStock",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "HabTechProps",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KerbalEngineerRedux",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "TexturesUnlimited",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "TUFX",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ModularLaunchPads",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "AuroraSpaceCenter",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "B9-PWings-Fork",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "BDArmoryContinued",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "BluedogDB",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "BoringCrewServices",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "CameraTools",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ConformalDecals",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "CustomBarnKit",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Deferred",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "DistantObject",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "DodoLabsStockalikeElectron",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ElectronStrongbackErector",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "FarFutureTechnologies",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Firefly",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Firespitter",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "FMRSContinued",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "FreeIva",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "HabTech2",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "HangerExtenderExtended",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "HeatControl",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "HullcamVDSContinued",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "HyperEdit",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "JamesWebbForKerbal",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KAS",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KIS",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KerbCam-Continued",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KerbinSideRemastered",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Knes",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "kOSforAll",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "kOS-KerbalEngineer",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Kronometer",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KSCExtended",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KSCFloodlightsMk2",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "MechJeb2",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "MiniSampleReturnCapsule",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ProceduralParts",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ReStockPlus",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Reviva",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "RocketSoundEnhancement",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ShangshengOrbital",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ShuttleLiftingBodyCormorantAeronology",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "KerbalizedBocaChica",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "SpaceXLandingPads",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Spectra",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Spectra-Scatterer",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "StarshipExpansionProject",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "StationPartsExpansionRedux",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "TacSelfDestructContinued",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "NewTantares",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "NewTantaresLV",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "ThroughTheEyesOfaKerbal",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Toolbar",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "Trajectories",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "TUFXProfileVision",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "TundraExploration",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "TweakScale",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "VaporVent",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "VesselMoverContinued",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "VolumetricVaporCones",
+            "suppress_recommendations": true
+        },
+        {
+            "name": "WaterfallRestock",
+            "suppress_recommendations": true
+        }
+    ],
+    "release_date": "2026-03-02T22:15:28.5726681Z",
+    "kind": "metapackage"
+}
