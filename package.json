@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@tabler/core": "^1.4.0",
+    "bootstrap": "^5.3.2",
+    "sass": "^1.97.3",
+    "tabler": "^1.0.0"
+  }
+}
