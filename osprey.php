@@ -63,8 +63,9 @@
     </div>
 </div>
 
-<div class="background">
-    <img src="/assets/images/unnamed.png" alt="Mission Image" class="bgimg" style="left: 11%;">
+<div class="background" style="height: 60vh;"> <!-- Decreased the overall size of the container -->
+    <img src="/assets/images/unnamed1.png" alt="Mission Image" class="ospreyspecs"> <!-- added sizing changes because image is too big and centered it -->
+    <img src="/assets/images/unnamed2.png" alt="Mission Image" class="ospreyspecs2"> <!-- Shortened version that just has the stats -->
 </div>
 
 <div class="background">
@@ -82,11 +83,11 @@
         </div>
     </div>
 </div>
-
-<div style="text-align: center;">
-    <iframe width="1280" height="720"
-        src="https://www.youtube.com/embed/HrBzr0vosW0?si=XBVWV49hkD4TVMK3"
-        frameborder="0"
+<!--fixed ui for youtube on mobile-->
+<!--old code:<iframe width="1280" height="720">-->
+<div class="video-wrapper">
+    <iframe 
+        src="https://www.youtube.com/embed/HrBzr0vosW0"
         allowfullscreen>
     </iframe>
 </div>

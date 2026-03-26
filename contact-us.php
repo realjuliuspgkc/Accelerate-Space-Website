@@ -10,7 +10,7 @@
         $email = $_POST['email'];
         $message = $_POST['message'];
         $name = $_POST['name'];
-	$to = "enquiries@acceleratespace.org";
+        $to = "enquiries@acceleratespace.org";
         
         require 'src/Exception.php';
         require 'src/PHPMailer.php.filepart';
@@ -29,7 +29,7 @@
             $mail->Port       = 465;
 
             $mail->setFrom('noreply@acceleratespace.org', 'Accelerate Space');
-            $mail->addAddress('enquiries@acceleratespace.org');
+            $mail->addAddress($to);
             $mail->addReplyTo($email);
 
             $mail->isHTML(false);

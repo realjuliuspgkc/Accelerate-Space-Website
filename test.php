@@ -21,8 +21,8 @@
             $mail->SMTPAuth   = true;
             $mail->Username   = 'noreply@acceleratespace.org';
             $mail->Password   = 'nwXQpWssmu2YzH';
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
 
             $mail->setFrom('noreply@acceleratespace.org', 'Accelerate Space');
             $mail->addAddress($email);

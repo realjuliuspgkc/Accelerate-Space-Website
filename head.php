@@ -1,6 +1,16 @@
 <?php
 session_start();
 
+$authorized = isset($_SESSION['authorized']) && $_SESSION['authorized'] === true;
+
+if (!$authorized) {
+    // http_response_code(503);
+    // header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    // header("Pragma: no-cache");
+    // header("Expires: 0");
+    header("Location: /maintenance");
+}
+
 register_shutdown_function(function() {
 ?>
     </main>
@@ -111,10 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar-menu" style="padding-left: 25px;">
-                <ul class="navbar-nav w-100">
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a href="/" class="nav-link" style="color: white;">HOME</a></li>
-                    <li class="nav-item"><a href="/launches" class="nav-link" style="color: white;">LAUNCHES</a></li>
                     <li class="nav-item"><a href="/osprey" class="nav-link" style="color: white;">OSPREY</a></li>
                     <li class="nav-item"><a href="/space_systems" class="nav-link" style="color: white;">SPACE SYSTEMS</a></li>
                     <li class="nav-item dropdown">
@@ -139,13 +148,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         </li>
                     <?php endif; ?>
-                    <li class="nav-item dropdown ms-auto">
+                    <li class="nav-item dropdown dropdown-launches">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white; border: 1px solid white;">UPCOMING LAUNCHES</a>
                         <div class="dropdown-menu launches-dropdown" style="background-color: black; color: white;">
                             <?php
                                 require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
 
-                                $query = "SELECT launchName, redirectPath, missionPatch, launchDate FROM launches WHERE completed = 0 ORDER BY launchOrder ASC";
+                                $query = "SELECT launchName, redirectPath, missionPatch, launchDate FROM launches WHERE completed = 0 ORDER BY launchOrder ASC LIMIT 2";
 
                                 $result = mysqli_query($conn, $query);
 
@@ -197,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
                                 </a>
                             <?php } ?>
+                            <a href="/launches" class="nav-link" style="color: white; font-size: 0.8rem;">All Upcoming Launches</a>
                         </div>
                     </li>
                 </ul>

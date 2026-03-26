@@ -1,7 +1,6 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] . '/head.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
-    session_start();
 
     if (!isset($_SESSION["user_id"])) {
         header("Location: login.php");

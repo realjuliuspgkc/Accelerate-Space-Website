@@ -6,7 +6,7 @@
 
 <div style="position:relative; background:black; padding: 1.5rem;">
     <div class="container">
-        <p style="text-align: center; color: white; font-size: 5rem;">Management Team</p>
+        <p style="text-align: center; color: white; font-size: 5vw;">Management Team</p><!--fixed font size on mobile-->
         <div class="row row-deck justify-content-center">
             <div class="col-md-4">
                 <div class="card" style="background:rgba(0,0,0,0.0); box-shadow:none; color:white; border: 1px solid white;">

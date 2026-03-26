@@ -29,7 +29,6 @@ html, body {
     padding: 0 !important;
 }
 
-
 .hero-mission-container {
     position: relative;
     min-height: 95vh;
@@ -102,6 +101,10 @@ header li a {
     position: relative;
 }
 
+.dropdown-launches {
+    margin-inline-start: auto;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -146,7 +149,7 @@ header li a {
 }
 
 .bgimg {
-    object-fit:cover;
+    object-fit: cover;
     position: absolute;
     top:0; 
     left:0; 
@@ -261,7 +264,6 @@ header li a {
     border: 1px solid #ffffff;
     transition: background-color 0.3s, color 0.3s
 }
-
 
 .blog_header {
     background-color: #171717;
@@ -427,6 +429,7 @@ header li a {
 .navbar .container-fluid,
 .navbar .collapse {
     overflow: visible !important;
+    padding-left: 25px;
 }
 
 @media (min-width: 768px) {
@@ -483,4 +486,188 @@ header li a {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid white;
+}
+
+
+/* Screen Size Optimization */
+
+/*
+@media (max-width: px) {
+    
+}
+*/
+
+@media (max-width: 1135px) {
+    .collapse, .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 1215px) {
+    header ul  {
+        gap: 0;
+    }
+}
+
+@media (max-width: 1240px) and (min-width: 1063px) {
+    .navbar {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .blog_header-container {
+        height:auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: block
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .blog__hero-content {
+        width:100%
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .blog_header-title {
+        font-size:50px;
+        letter-spacing: 10px
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .blog_header-post-title {
+        font-size:20px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        margin-bottom: 15px
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .blog_info {
+        padding:20px 0
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .blog_info-featured {
+        margin-bottom:25px
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .crumb {
+        font-size:10px;
+        letter-spacing: 3px;
+        font-weight: 500
+    }
+
+    .crumb svg {
+        width: 5px;
+        height: 10px;
+        vertical-align: -2px
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .crumbs {
+        font-size:0;
+        position: static;
+        margin-bottom: 30px
+    }
+}
+
+@media (min-width: 768px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    top: 100%;
+    max-height: 70vh;
+  }
+  
+  .navbar .dropdown:hover > .nav-link {
+    /* makes it look active while hovering */
+    color: #fff;
+  }
+
+}
+.table-responsive {
+        overflow-x: auto; /* Scroll on small screens */
+    }
+
+@media (max-width: 768px) {
+  .video-background video {
+    display: none;
+    
+  }
+  .video-background {
+    background: url('/assets/images/Screenshot 2026-03-06 093138.png') no-repeat center center/cover;
+  }
+  
+}
+
+.video-wrapper {
+    width: 90%;
+    max-width: 900px;   /* limits size on desktop */
+    aspect-ratio: 16 / 9;
+    margin: 60px auto;  /* centers the video */
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.launch-mobile {
+    display: none;
+}
+
+.launch-desktop {
+    display: block;
+}
+
+@media (max-width: 978px) {
+    .launch-mobile {
+        display: block;
+    }
+
+    .launch-desktop {
+        display: none;
+    }
+}
+
+.ospreyspecs {
+    object-fit: cover;
+    position: absolute;
+    top:0; 
+    left: 25%; 
+    z-index:1; 
+    width: 50vw;
+    height: 50vh;
+    display: block; /*fixes*/
+}
+
+@media (max-width: 1128px) {
+    .ospreyspecs {
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+}
+
+.ospreyspecs2 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .ospreyspecs {
+        display: none;
+    }
+    .ospreyspecs2 {
+        display: block;
+    }
 }

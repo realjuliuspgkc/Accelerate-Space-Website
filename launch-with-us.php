@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php if (!empty($submitted) && $submitted): ?>
   <div class="form-success">
-    <h2>Thank you — your launch request has been received.</h2>
+    <h2>Thank you â€” your launch request has been received.</h2>
     <p>We will contact you at <?php echo htmlspecialchars($email); ?> with next steps.</p>
   </div>
 <?php else: ?>
@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
   <div class="card card-sm bg-black">
     <div class="card-body"> 
-    <p style="color: white;">Inclination (°): <input type="text" name="inclination" value="<?php echo htmlspecialchars($inclination); ?>" class="form-control">
+    <p style="color: white;">Inclination (Â°): <input type="text" name="inclination" value="<?php echo htmlspecialchars($inclination); ?>" class="form-control">
     <span class="error">* <?php echo $incErr;?></span><br>
   </div>
 </div>

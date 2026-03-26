@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once($_SERVER['DOCUMENT_ROOT'] . '/db.php');
 
     if (!isset($_SESSION["user_id"])) {
@@ -81,7 +80,7 @@
         // ===== DATABASE INSERT =====
         $stmt = $conn->prepare("
             UPDATE launches SET
-	launchOrder = ?,
+              	launchOrder = ?,
                 launchName = ?,
                 vehicleType = ?,
                 description = ?,

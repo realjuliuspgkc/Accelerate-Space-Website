@@ -1,0 +1,117 @@
+/* custom-tabler-overrides.css */
+
+/* ==============================
+   Mobile mode 768px – 1062px
+=============================== */
+@media (min-width: 768px) and (max-width: 1062px) {
+
+  /* Show the navbar toggler */
+  .navbar-expand-md .navbar-toggler {
+    display: block;
+  }
+
+  /* Hide collapsed menu when closed */
+  .navbar-expand-md .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+
+  /* Show collapsed menu when open */
+  .navbar-expand-md .navbar-collapse.show {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* navbar background */
+    z-index: 1050;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Vertical menu items stacked and left-aligned */
+  .navbar-expand-md .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /* Each <li> full width */
+  .navbar-expand-md .navbar-nav > li {
+    width: 100% !important;
+  }
+
+  /* Each nav link full width, block display, left aligned */
+  .navbar-expand-md .navbar-nav .nav-link {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Dropdown toggle arrow aligned right */
+  .navbar-expand-md .navbar-nav .dropdown-toggle::after {
+    float: right;
+    margin-left: 0.5rem;
+  }
+
+  /* Main dropdown menus */
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute !important; /* must be absolute for animation */
+    float: none;
+    min-width: 10rem;
+    background-color: #111;
+    border: 1px solid #444;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    margin-top: 0.125rem;
+    border-radius: 0.375rem;
+    z-index: 1060;
+    transform-origin: top center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+
+  /* Show state for dropdown animation */
+  .navbar-expand-md .navbar-nav .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Close button in top right */
+  .navbar-expand-md .navbar-collapse.show .btn-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    color: #fff;
+    opacity: 1;
+    z-index: 1060;
+  }
+}
+
+/* ==============================
+   Mobile mode < 768px (default Tabler)
+=============================== */
+@media (max-width: 768px) {
+  .collapsing {
+    background: black;
+  }
+
+  .collapse.show {
+    background: black;
+  }
+
+  /* Force nav items full width */
+  .navbar-expand-md .navbar-nav > li {
+    width: 100% !important;
+  }
+
+  /* Ensure dropdowns behave properly on small screens */
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
+}
+

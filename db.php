@@ -1,8 +1,8 @@
 <?php
-$servername = "mysql-200-140.mysql.prositehosting.net";
-$username = "root_user";
-$password = "8945fb38db165d92";
-$dbname = "sql_acceleratespace";
+$servername = "localhost";
+$username = "sql_rinza";
+$password = "cnij4fWHSGfa2bJS";
+$dbname = "sql_rinza";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
